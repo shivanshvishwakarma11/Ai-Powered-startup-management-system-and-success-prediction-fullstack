@@ -97,13 +97,34 @@ This project integrates:
 
 # 🏗️ System Architecture
 
+The platform follows a modern full-stack architecture where the frontend communicates with secure backend APIs, which manage business logic, database operations, and AI-driven startup success prediction.
+
 ```text
-Frontend (React)
-       ↓
-REST API Layer
-       ↓
-Backend (Spring Boot)
-       ↓
-PostgreSQL Database
-       ↓
-AI/ML Prediction Engine
+ ┌─────────────────────────────┐
+ │      React Frontend         │
+ │  • Dashboard UI             │
+ │  • Analytics Pages          │
+ │  • Authentication           │
+ │  • Startup Management       │
+ └─────────────┬───────────────┘
+               │
+               │ HTTP / REST API Calls
+               ▼
+ ┌─────────────────────────────┐
+ │    Spring Boot Backend      │
+ │  • REST APIs                │
+ │  • Business Logic           │
+ │  • JWT Authentication       │
+ │  • Security & Validation    │
+ └─────────────┬───────────────┘
+               │
+     ┌─────────┴─────────┐
+     │                   │
+     ▼                   ▼
+┌───────────────┐   ┌──────────────────┐
+│ PostgreSQL DB │   │ AI/ML Engine     │
+│ • User Data   │   │ • Prediction ML  │
+│ • Startup Data│   │ • Data Analysis  │
+│ • Financials  │   │ • Success Score  │
+│ • Tasks       │   │ • Insights       │
+└───────────────┘   └──────────────────┘
