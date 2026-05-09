@@ -1,0 +1,8 @@
+com\startupai\controller\FinanceController.class
+com\startupai\controller\TeamController.class
+com\startupai\controller\AuthController.class
+com\startupai\controller\InsightsController.class
+com\startupai\config\CorsConfig.class
+com\startupai\controller\DashboardController.class
+com\startupai\controller\AIPredictorController.class
+com\startupai\StartupAiApplication.class
